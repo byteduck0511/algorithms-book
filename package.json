@@ -4,8 +4,8 @@
   "private": true,
   "description": "《数据结构与算法自学：从工程直觉到复杂度思维》—— GitBook/HonKit 构建工程",
   "scripts": {
-    "serve": "honkit serve",
-    "build": "honkit build"
+    "serve": "honkit serve --reload",
+    "build": "honkit build --reload"
   },
   "license": "UNLICENSED",
   "devDependencies": {

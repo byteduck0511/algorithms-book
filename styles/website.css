@@ -1,0 +1,6 @@
+/* 隐藏所有还未被 KaTeX 处理的公式原始文本 */
+.hidden-math {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}

@@ -45,10 +45,10 @@
 ## 第 3 部分　排序与查找
 
 * 第 7 章　基础排序与比较模型
-    * [7.1　冒泡、选择、插入：三种 $O(n^2)$ 排序](chapters/ch07/7.1-quadratic-sorts.md)
+    * [7.1　冒泡、选择、插入：三种 O(n^2) 排序](chapters/ch07/7.1-quadratic-sorts.md)
     * [7.2　稳定性：同分时谁在前](chapters/ch07/7.2-stability.md)
     * [7.3　比较模型与交换次数](chapters/ch07/7.3-inversions-and-comparison-model.md)
-    * [7.4　下界：为什么比较排序绕不开 $n \log n$](chapters/ch07/7.4-lower-bound.md)
+    * [7.4　下界：为什么比较排序绕不开 n \log n](chapters/ch07/7.4-lower-bound.md)
 
 * 第 8 章　高效排序
     * [8.1　归并排序：稳定且可预测](chapters/ch08/8.1-merge-sort.md)

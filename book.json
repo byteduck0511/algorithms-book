@@ -11,6 +11,15 @@
   "pluginsConfig": {
     "zh-search": {
       "comment": "中文 2-gram 分词 + 排除代码块，实现在 99-tools/plugins/gitbook-plugin-zh-search"
+    },
+    "zh-katex": {
+      "throwOnError": false
     }
+  },
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "scripts": {
+    "website": "scripts/custom.js"
   }
 }
