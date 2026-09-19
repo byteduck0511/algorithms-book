@@ -18,8 +18,5 @@
   },
   "styles": {
     "website": "styles/website.css"
-  },
-  "scripts": {
-    "website": "scripts/custom.js"
   }
 }

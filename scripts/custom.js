@@ -39,7 +39,6 @@
   function renderKatex() {
     if (window.renderMathInElement) {
       console.log("render Katex.");
-      debugger;
 
       window.renderMathInElement(document.body, {
         delimiters: [
