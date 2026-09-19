@@ -1,0 +1,20 @@
+# 只把「书」放进产物 —— 以下是做这本书用的东西，不随书发布。
+# 书的内容 = intro.md + SUMMARY.md 里列出的 chapters/**
+
+# 构建工程自身（曾被误复制进 _book/，此处显式排除）
+#
+# ⚠️ 千万不要把 book.json 写进来 —— HonKit 用本文件过滤扫描到的文件清单，
+#    book.json 一旦被滤掉，配置就整个读不到，会静默回退成默认配置：
+#    插件退回内置的 lunr（中文搜索与 KaTeX 双双失效）、
+#    structure.readme 退回 README.md（首页变成 README，多出一个 intro.html）。
+.bookignore
+.gitignore
+package.json
+package-lock.json
+README.md
+
+# 做书用的目录，不是书的内容
+00-plan/
+99-tools/
+node_modules/
+_book/

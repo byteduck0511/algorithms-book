@@ -1,0 +1,11 @@
+{
+  "name": "gitbook-plugin-zh-search",
+  "version": "1.0.0",
+  "description": "中文友好的全文搜索：2-gram 中文分词 + 排除代码块，替代 gitbook-plugin-lunr",
+  "main": "index.js",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

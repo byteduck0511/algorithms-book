@@ -1,0 +1,16 @@
+{
+  "name": "algorithms-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《数据结构与算法自学：从工程直觉到复杂度思维》—— GitBook/HonKit 构建工程",
+  "scripts": {
+    "serve": "honkit serve",
+    "build": "honkit build"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gitbook-plugin-zh-katex": "file:99-tools/plugins/gitbook-plugin-zh-katex",
+    "gitbook-plugin-zh-search": "file:99-tools/plugins/gitbook-plugin-zh-search",
+    "honkit": "^6.2.2"
+  }
+}

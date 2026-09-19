@@ -1,0 +1,11 @@
+{
+  "name": "gitbook-plugin-zh-katex",
+  "version": "1.0.0",
+  "description": "前端 KaTeX 数学渲染；跳过 pre/code，避免与代码中的 $ 插值字符串冲突",
+  "main": "index.js",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

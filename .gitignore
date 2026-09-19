@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+
+# GitBook / HonKit 构建产物
+node_modules/
+_book/
+
+# 电子书产物（99-tools/build-ebook.ps1 生成）
+_ebook/

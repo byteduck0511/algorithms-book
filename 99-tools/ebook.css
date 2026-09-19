@@ -1,0 +1,70 @@
+/*
+ * 《数据结构与算法自学》电子书排版样式
+ *
+ * 由 pandoc 以 --css 引入，EPUB 与 PDF(经 HTML) 两条路线共用。
+ * 只做"中文技术书"必需的几件事：字体族、行高、代码换行、表格不溢出。
+ * 颜色与装饰交给各阅读器的主题，不在这里硬编码。
+ */
+
+/* 正文：中文衬线字体，行高放宽（中文比西文需要更多行距），两端对齐 */
+body {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC",
+               "SimSun", "AR PL UMing CN", serif;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+/* 标题用无衬线，和正文拉开对比 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC",
+               "Microsoft YaHei", "Heiti SC", sans-serif;
+  line-height: 1.4;
+  text-align: left;
+  page-break-after: avoid;   /* 标题不要孤零零留在页底 */
+}
+
+/* 代码：等宽字体 */
+code, pre, kbd, samp {
+  font-family: "Cascadia Mono", "Consolas", "DejaVu Sans Mono",
+               "Liberation Mono", monospace;
+}
+
+/*
+ * 代码块：允许折行。
+ * 书里的代码行长普遍超出手机屏宽，不折行就要横向滚动，阅读体验更差。
+ * 代价是「实测输出」那类靠空格对齐的文本会失去列对齐 —— 两害相权取其轻。
+ */
+pre {
+  font-size: 0.78em;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  page-break-inside: avoid;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+/* 表格：缩小字号并允许断词，避免在窄屏上溢出 */
+table {
+  font-size: 0.88em;
+  page-break-inside: avoid;
+}
+
+th, td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 引用块（每章的「本章解决的问题」、正文提示）稍小一号 */
+blockquote {
+  font-size: 0.95em;
+}
+
+/* 图片不超出页宽 */
+img {
+  max-width: 100%;
+  height: auto;
+}

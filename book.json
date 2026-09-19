@@ -1,0 +1,16 @@
+{
+  "title": "数据结构与算法自学：从工程直觉到复杂度思维",
+  "description": "面向有编程经验、但没系统学过算法的工程师的自学书。63 节，每节结论都用真实代码实测过。",
+  "language": "zh-hans",
+  "author": "小陈与老周",
+  "structure": {
+    "readme": "intro.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": ["-lunr", "zh-search", "zh-katex"],
+  "pluginsConfig": {
+    "zh-search": {
+      "comment": "中文 2-gram 分词 + 排除代码块，实现在 99-tools/plugins/gitbook-plugin-zh-search"
+    }
+  }
+}
