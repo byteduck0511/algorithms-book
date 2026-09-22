@@ -4,3 +4,24 @@
   position: absolute;
   left: -9999px;
 }
+
+/* 公式里的中文
+ *
+ * KaTeX 的 \text{} 用 KaTeX_Main 排版，而 KaTeX_Main 没有中文字形，
+ * 浏览器就按 font-family 里的兜底项回退到 serif —— 正文是「Helvetica Neue
+ * + 系统无衬线」，公式里却冒出一段宋体，字重和字宽都对不上，很突兀。
+ *
+ * KaTeX 会给这类回退字符打上 .cjk_fallback，这里把它们接回和正文一致的
+ * 无衬线字体栈：西文仍走 Helvetica，中文交给系统中文字体。
+ */
+.katex .cjk_fallback {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei",
+    "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+/* 上下标位置（\underbrace 的说明文字、\sum 的上下限）里，中文比西文字形
+ * 更满、笔画更密，按同样的比例缩小后明显偏小发糊，补回一档。
+ * KaTeX 给 script style 的字符打的是 .mtight，正常位置的 \text{} 不受影响。 */
+.katex .cjk_fallback.mtight {
+  font-size: 1.15em;
+}

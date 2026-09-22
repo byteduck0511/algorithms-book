@@ -18,7 +18,24 @@
  * 资源来自 katex@0.13.19 的 dist（katex.min.js / auto-render.min.js /
  * katex.min.css / fonts/*.woff2），随插件自带，离线可用。
  */
+var protectMath = require('./lib/protect-math').protectMath;
+
 module.exports = {
+    hooks: {
+        /**
+         * 在 Markdown 解析之前，把公式里的 `_` `*` 等 Markdown 敏感字符转义掉。
+         *
+         * 前端渲染方案有个前提：`$$...$$` 必须原封不动地活到浏览器里。但
+         * Markdown 引擎会先把公式里的成对 `_` 解析成 <em>，把定界符劈成两半，
+         * auto-render 便再也匹配不上（详见 lib/protect-math.js 的说明）。
+         * 放在这里统一兜住，作者写公式时就不必惦记 Markdown 的强调规则。
+         */
+        'page:before': function (page) {
+            page.content = protectMath(page.content);
+            return page;
+        }
+    },
+
     book: {
         assets: './assets',
         js: [
